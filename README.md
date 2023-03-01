@@ -44,12 +44,15 @@ google.cloud (didn't use in previous version using VM but might be useful)
   
 Created project ansibleproject and created a basic playbook with logging of all vars using guidelines from https://zwischenzugs.com/2021/08/27/five-ansible-techniques-i-wish-id-known-earlier/
 
+## Dynamic inventory
 Decided to try to use a dynamic inventory. Check if there is a plugin for google cloud
 ansible-doc -t inventory -l  
 Might be able to use google.cloud.gcp_compute  
   
 Followed instructions here https://github.com/cloudadvocate/google-cloud/tree/master/ansible-dynamic-inventory  
-NB had to install pip3 on controller as a dependency for this and create service-account.json on google cloud console
+NB had to install pip3 on controller as a dependency for this and create service-account.json on google cloud console  
+Then I ran ansible-inventory -i gcp.yml --graph to ensure the hosts and groups had been assigned correctly
+
 
 
 
