@@ -51,7 +51,10 @@ Might be able to use google.cloud.gcp_compute
   
 Followed instructions here https://github.com/cloudadvocate/google-cloud/tree/master/ansible-dynamic-inventory  
 NB had to install pip3 on controller as a dependency for this and create service-account.json on google cloud console  
-Then I ran ansible-inventory -i gcp.yml --graph to ensure the hosts and groups had been assigned correctly
+Then I ran ansible-inventory -i gcp.yml --graph to ensure the hosts and groups had been assigned correctly  
+
+## Collections
+Determine which collections can be used
 
 
 
