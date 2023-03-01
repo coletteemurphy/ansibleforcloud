@@ -35,6 +35,17 @@ ansible-inventory --list -y -i inventory.txt
   
 and confirmed can ping other 3 hosts  
 ansible all -m ping -u root -i inventory.txt  
+  
+Checked which collections were already available by running  
+ansible-galaxy collection list  
+Things already installed that I could use include  
+commmunity.mysql  
+google.cloud (didn't use in previous version using VM but might be useful)  
+  
+Created project ansibleproject and created a basic playbook with logging of all vars using guidelines from https://zwischenzugs.com/2021/08/27/five-ansible-techniques-i-wish-id-known-earlier/
+
+
+
 
 
 
