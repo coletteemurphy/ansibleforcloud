@@ -21,3 +21,21 @@ Deploy a web application using the following restrictions:
 
 Note: Mysql is listening by default on 127.0.0.1 update it on /etc/mysql/my.conf. As well as allow the Mysql user to connect from source IP or %
 
+## Notes
+  
+Created 4 vms on google cloud  
+Installed ansible on controller  
+  
+sudo apt-add-repository ppa:ansible/ansible  
+sudo apt update  
+sudo apt install ansible  
+    
+Created project1 with a simple inventory file, confirmed they were added ok  
+ansible-inventory --list -y -i inventory.txt  
+  
+and confirmed can ping other 3 hosts  
+ansible all -m ping -u root -i inventory.txt  
+
+
+
+
