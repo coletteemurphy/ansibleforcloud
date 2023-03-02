@@ -56,6 +56,33 @@ Then I ran ansible-inventory -i gcp.yml --graph to ensure the hosts and groups h
 ## Collections
 Determine which collections can be used
 
+| package needed | possible collection | already included in ansible 2.12.10 |
+| ---------------| --------------------| ------------------------------------|
+| firewalld | ansible.posix | yes |
+| mysql | community.mysql | yes|
+|httpd | ||
+|git| ansible.builtin| yes |
+
+## Vars
+Determine which vars might be used and where
+| var | values | host or group |
+|-----|--------|---------------|
+| installs | firewalld  | all |
+|          | mysql-server | db |
+|          | MySQL-python| db |
+|          | python       | db |
+|          | httpd | web|
+|          | php | web |
+|          |pph-mysql | web |
+|          | git | web |
+| repos    | git repo | web |
+| db stuff | db name| db|
+|          | db user details| db|
+|replacement values for php file| original host | web |
+|                               | new host (db server ip address dynamically sourced?| web|
+
+
+
 
 
 
