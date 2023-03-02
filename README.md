@@ -81,6 +81,18 @@ Determine which vars might be used and where
 |replacement values for php file| original host | web |
 |                               | new host (db server ip address dynamically sourced?| web|
 
+## Roles
+Following discussion here don't mix roles and tasks - all functionality will go in roles
+(https://redhat-cop.github.io/automation-good-practices/#_use_either_the_tasks_or_roles_section_in_playbooks_not_both)
+  
+set up firewalld - web_hosts and db_hosts
+configure firewall - seperate tasks for web and db
+set up db - db_hosts
+configure db - db_hosts
+configure web server - web_hosts
+configure web application - web_hosts
+email notification
+
 
 
 
